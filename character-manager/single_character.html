@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../character-manager/dist/output.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div
+      class="flex flex-col mx-10 my-10 bg-gradient-to-r from-stone-700 rounded-2xl"
+    >
+      <h1 class="text-emerald-600 m-auto my-4">Character Manager</h1>
+
+      <form
+        class="flex flex-col m-auto place-content-center p-8"
+        action=""
+        method="post"
+      >
+        <input class="p-8" type="file" name="Upload Image" />
+        <input
+          class="m-4"
+          id=""
+          type="text"
+          name="character_name"
+          placeholder="Character Name..."
+        />
+        <input
+          class="m-4"
+          id=""
+          type="text"
+          name="character_nickname"
+          placeholder="Character Nickname"
+        />
+        <textarea
+          class="m-4"
+          id=""
+          name="character_description"
+          cols="30"
+          rows="10"
+          placeholder="Character Description"
+        ></textarea>
+        <input class="m-4" type="submit" value="Save changes" />
+      </form>
+    </div>
+  </body>
+</html>
