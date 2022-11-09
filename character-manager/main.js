@@ -37,8 +37,8 @@ async function getCharacter() {
       div.setAttribute('class', 'flex flex-col m-auto rounded-2xl bg-white bg-opacity-20 shadow-xl w-3/4 md:w-2/5 xl:w-1/5')
       heading.setAttribute('class', 'text-white opacity-100 m-auto my-4 text-x')
       subHeading.setAttribute('class', 'text-white opacity-100 m-auto my-4 text-lg')
-      description.setAttribute('class', 'm-4 p-2 text-white h-[250px] overflow-hidden')
-      btnSeeMore.setAttribute('class', 'bg-purple-900 hover:bg-purple-500 text-white font-bold py-2 px-4 rounded-full w-1/2 mx-auto my-5')
+      description.setAttribute('class', 'm-4 p-2 text-white h-[250px] overflow-hidden text-justify')
+      btnSeeMore.setAttribute('class', 'font-sans bg-purple-900 hover:bg-purple-500 text-white py-2 px-4 rounded-full w-1/2 mx-auto my-5')
       image.setAttribute('src', `data:image/gif;base64, ${data.image}`);      // transform the URI in img 
       image.setAttribute('class', 'shadow-xl mx-auto rounded-full my-4');
       image.setAttribute('width', '125');
