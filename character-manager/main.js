@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const main = document.querySelector('main');
+const cardWrapper = document.getElementById('cardWrapper');
 const searchBar = document.getElementById('searchBar');
 
 const updateNewCharacter = {
@@ -34,13 +34,13 @@ async function getCharacter() {
 
       // set the styles
 
-      div.setAttribute('class', 'flex flex-col p-5 mb-4 bg-slate-200 w-80 rounded-lg h-[550px] shadow-xl relative');
-      heading.setAttribute('class','text-center pt-5 pb-2');
-      subHeading.setAttribute('class', 'text-center py-2');
-      description.setAttribute('class', 'text-left py-2 h-[250px] overflow-hidden');
-      btnSeeMore.setAttribute('class', 'bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full')
+      div.setAttribute('class', 'flex flex-col m-auto rounded-2xl bg-white bg-opacity-20 shadow-xl w-3/4 md:w-2/5 xl:w-1/5')
+      heading.setAttribute('class', 'text-white opacity-100 m-auto my-4 text-x')
+      subHeading.setAttribute('class', 'text-white opacity-100 m-auto my-4 text-lg')
+      description.setAttribute('class', 'm-4 p-2 text-white h-[250px] overflow-hidden')
+      btnSeeMore.setAttribute('class', 'bg-purple-900 hover:bg-purple-500 text-white font-bold py-2 px-4 rounded-full w-1/2 mx-auto my-5')
       image.setAttribute('src', `data:image/gif;base64, ${data.image}`);      // transform the URI in img 
-      image.setAttribute('class', 'shadow-xl mx-auto rounded-md');
+      image.setAttribute('class', 'shadow-xl mx-auto rounded-full my-4');
       image.setAttribute('width', '125');
 
       // button see more
@@ -61,7 +61,7 @@ async function getCharacter() {
       heading.textContent = data.name;
       subHeading.textContent = data.shortDescription;
       description.textContent = data.description;
-      main.append(div);
+      cardWrapper.append(div);
       div.append(image, heading, subHeading, description, btnSeeMore);
 
 
@@ -80,7 +80,7 @@ async function getCharacter() {
         }
       })
 
-
+      console.log(data.name)
       console.log(data.id);
     })
   
@@ -123,12 +123,15 @@ getCharacter();
 
 // async function deleteCharacter() {
 //   try {
-// let res = await axios.delete('https://character-database.becode.xyz/characters/eb4d61c9-4e65-476d-a65e-dbcc6fa1a6d5')
+// let res = await axios.delete('https://character-database.becode.xyz/characters/e3951391-e7d6-4f0e-902c-ea0186d90067')
 //     console.log(res.data); // we can redirect to the index page
 //   } catch(err) {
 //     console.log(err)
 //   }
 // }
+
+// deleteCharacter()
+
 
 
 // function encode() {
