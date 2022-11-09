@@ -20,14 +20,13 @@
       <div
         class="flex flex-col m-auto rounded-2xl w-1/2 bg-white bg-opacity-20"
       >
-        <img class="rounded-full my-4" />
-        <h1
-          class="text-white opacity-100 m-auto my-4 text-3xl font-bold font-cursive"
-        ></h1>
-        <h2 class="text-white opacity-100 m-auto my-4 text-xl font-sans"></h2>
-        <h3 class="text-white opacity-100 m-auto my-4 text-lg font-sans"></h3>
+        <img id="singleCharacterImg" class="shadow-xl mx-auto rounded-full my-4" />
+
+        <h2 id="singleCharacterName" class="text-white opacity-100 m-auto my-4 text-xl font-sans text-x"></h2>
+        <h3 id="singleCharacterNickname" class="text-white opacity-100 m-auto my-4 text-lg font-sans "></h3>
         <p
-          class="my-4 rounded-2xl bg-white bg-opacity-70 text-white text-base font-sans text-justify"
+          id="singleCharacterDescription"
+          class="my-4 text-white text-base font-sans text-justify m-4 p-2 overflow-hidden "
         ></p>
         <input
           class="text-lg rounded-2xl text-white bg-sky-700 w-1/2 m-auto my-4"
@@ -37,10 +36,12 @@
         <button
           class="text-lg rounded-2xl border-solid border-red-900 border-4 text-red-900 w-1/2 m-auto"
           type="button"
+          id="btnDelete"
         >
           Delete character
         </button>
       </div>
     </main>
+    <script type="module" src="singleCharacter.js"></script>
   </body>
 </html>
