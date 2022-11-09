@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../character-manager/dist/output.css" rel="stylesheet" />
+    <title>Create and Update</title>
+  </head>
+  <body class="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
+    <div class="flex flex-col m-auto rounded-2xl w-1/2 bg-white bg-opacity-20">
+      <h1 class="text-white opacity-100 m-auto my-4 text-2xl">
+        Character Manager
+      </h1>
+      <img class="rounded-full my-4" />
+      <form
+        class="flex flex-col m-auto place-content-center p-8"
+        action=""
+        method="post"
+      >
+        <input
+          class="p-8 bg-white rounded-2xl opacity-70"
+          type="file"
+          name="Upload Image"
+        />
+        <input
+          class="my-4 rounded-2xl h-8 bg-white opacity-70"
+          id=""
+          type="text"
+          name="character_name"
+          placeholder="Character Name..."
+        />
+        <input
+          class="my-4 rounded-2xl h-8 bg-white opacity-70"
+          id=""
+          type="text"
+          name="character_nickname"
+          placeholder="Character Nickname"
+        />
+        <textarea
+          class="my-4 rounded-2xl bg-white opacity-70"
+          id=""
+          name="character_description"
+          cols="30"
+          rows="10"
+          placeholder="Character Description"
+        ></textarea>
+        <input
+          class="text-lg rounded-2xl text-white bg-sky-700 w-1/2 m-auto my-4"
+          type="submit"
+          value="Save changes"
+        />
+        <button
+          class="text-lg rounded-2xl border-solid border-red-900 border-4 text-red-900 w-1/2 m-auto"
+          type="button"
+        >
+          Delete character
+        </button>
+      </form>
+    </div>
+  </body>
+</html>
