@@ -11,7 +11,8 @@
       <h1 class="text-white opacity-100 m-auto my-4 text-2xl">
         Character Manager
       </h1>
-      <img class="rounded-full my-4" />
+      <img class="rounded-full my-4" /> 
+<!-- put preview of img -->
       <form
         class="flex flex-col m-auto place-content-center p-8"
         action=""
@@ -21,24 +22,25 @@
           class="p-8 bg-white rounded-2xl opacity-70"
           type="file"
           name="Upload Image"
+          id="userCharacterImg"
         />
         <input
           class="my-4 rounded-2xl h-8 bg-white opacity-70"
-          id=""
+          id="userCharacterName"
           type="text"
           name="character_name"
           placeholder="Character Name..."
         />
         <input
           class="my-4 rounded-2xl h-8 bg-white opacity-70"
-          id=""
+          id="userCharacterNickname"
           type="text"
           name="character_nickname"
           placeholder="Character Nickname"
         />
         <textarea
           class="my-4 rounded-2xl bg-white opacity-70"
-          id=""
+          id="userCharacterDescription"
           name="character_description"
           cols="30"
           rows="10"
@@ -46,8 +48,9 @@
         ></textarea>
         <input
           class="text-lg rounded-2xl text-white bg-sky-700 w-1/2 m-auto my-4"
-          type="submit"
+          type="button"
           value="Save changes"
+          id="saveChanges"
         />
         <button
           class="text-lg rounded-2xl border-solid border-red-900 border-4 text-red-900 w-1/2 m-auto"
@@ -57,5 +60,6 @@
         </button>
       </form>
     </div>
+    <script type="module" src="upload.js"></script>
   </body>
 </html>
