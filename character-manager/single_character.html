@@ -16,7 +16,12 @@
     <title>Single Character</title>
   </head>
   <body class="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
-    <main>
+    <main class="flex flex-col">
+      <h1
+        class="text-white opacity-100 m-auto my-4 text-3xl font-bold font-cursive"
+      >
+        Character Manager
+      </h1>
       <div
         class="flex flex-col m-auto rounded-2xl w-1/2 bg-white bg-opacity-20"
       >
@@ -24,6 +29,17 @@
 
         <h2 id="singleCharacterName" class="text-white opacity-100 m-auto my-4 text-xl font-sans text-x"></h2>
         <h3 id="singleCharacterNickname" class="text-white opacity-100 m-auto my-4 text-lg font-sans "></h3>
+        <a href="index.html"
+          ><button
+            id="btn__home"
+            class="bg-purple-900 hover:bg-purple-500 text-white font-bold py-[5px] px-4 rounded-full fixed top-3 right-2 text-2xl hover:shadow-2xl z-10 hover:border-2 hover:border-indigo-900"
+          >
+            &#9750;
+          </button></a
+        >
+        <img class="rounded-full my-4" />
+        <h2 class="text-white opacity-100 m-auto my-4 text-xl font-sans"></h2>
+        <h3 class="text-white opacity-100 m-auto my-4 text-lg font-sans"></h3>
         <p
           id="singleCharacterDescription"
           class="my-4 text-white text-base font-sans text-justify m-4 p-2 overflow-hidden "
@@ -31,7 +47,7 @@
         <input
           class="text-lg rounded-2xl text-white bg-sky-700 w-1/2 m-auto my-4"
           type="submit"
-          value="Save changes"
+          value="Edit"
         />
         <button
           class="text-lg rounded-2xl border-solid border-red-900 border-4 text-red-900 w-1/2 m-auto"
