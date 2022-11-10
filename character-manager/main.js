@@ -1,5 +1,3 @@
-// import axios from "axios";
-
 const cardWrapper = document.getElementById('cardWrapper');
 const searchBar = document.getElementById('searchBar');
 
@@ -10,7 +8,7 @@ async function getCharacter() {
 
     let res = await fetch('https://character-database.becode.xyz/characters/');
     let datas = await res.json();
-    
+
     // loop through all the datas 
 
     datas.forEach(data => {
