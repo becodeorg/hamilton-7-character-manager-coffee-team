@@ -22,7 +22,7 @@
     >
       Character Manager
     </h1>
-    <div class="flex flex-col m-auto rounded-2xl w-1/2 bg-white bg-opacity-20">
+    <div class="flex flex-col mx-auto mb-5 rounded-2xl w-1/2 bg-white bg-opacity-20">
       <a href="index.html">
         <button
           href="index.html"
@@ -32,8 +32,6 @@
           &#9750;
         </button></a
       >
-      <img class="rounded-full my-4" />
-      <!-- put preview of img -->
       <form
         class="flex flex-col m-auto place-content-center p-8"
         action=""
@@ -45,22 +43,24 @@
           name="Upload Image"
           id="userCharacterImg"
         />
+        <div id="imgPreview" class="rounded-full my-4">
+        </div>
         <input
-          class="my-4 rounded-2xl h-8 bg-white opacity-70"
+          class="my-4 rounded-2xl h-8 bg-white opacity-70 p-3"
           id="userCharacterName"
           type="text"
           name="character_name"
           placeholder="Character Name..."
         />
         <input
-          class="my-4 rounded-2xl h-8 bg-white opacity-70"
+          class="my-4 rounded-2xl h-8 bg-white opacity-70 p-3"
           id="userCharacterNickname"
           type="text"
           name="character_nickname"
           placeholder="Character Nickname"
         />
         <textarea
-          class="my-4 rounded-2xl bg-white opacity-70"
+          class="my-4 rounded-2xl bg-white opacity-70 p-3"
           id="userCharacterDescription"
           name="character_description"
           cols="30"
@@ -68,7 +68,7 @@
           placeholder="Character Description"
         ></textarea>
         <input
-          class="text-lg rounded-2xl text-white bg-sky-700 w-1/2 m-auto my-4"
+          class="text-lg rounded-2xl text-white bg-sky-700 w-1/2 m-auto my-4 cursor-pointer"
           type="button"
           value="Save changes"
           id="saveChanges"
@@ -76,11 +76,12 @@
         <button
           class="text-lg rounded-2xl border-solid border-red-900 border-4 text-red-900 w-1/2 m-auto"
           type="button"
+          id="btnCancel"
         >
-          Delete character
+          Cancel
         </button>
       </form>
     </div>
-    <script type="module" src="upload.js"></script>
+    <script type="module" src="updateCharacter.js"></script>
   </body>
 </html>

@@ -7,19 +7,26 @@ const singleCharacterDescription = document.getElementById('singleCharacterDescr
 const singleCharacterNickname = document.getElementById('singleCharacterNickname');
 const singleCharacterImg = document.getElementById('singleCharacterImg');
 const btnDelete = document.getElementById('btnDelete');
+const btnEdit = document.getElementById('btnEdit');
 
 // get the url and split it to get the id
 
 const url = window.location.href;
 const id = url.split('=')[1];
 
+// edit the character
+
+btnEdit.addEventListener('click', () => {
+  document.location.href = `./update_character.html?id=${id}`; 
+})
+
+// delete the character
 
 btnDelete.addEventListener('click', () => {
     if (window.confirm("Do you really want to delete this character?")) {
         deleteCharacter();
-        setTimeout(() => {
-          window.open("index.html");    // need to test that part
-        }, 3000);
+        window.open("index.html");    // not deleted when going to index, need to refresh..
+
       } else {
         console.log("This character is still there!");
       }
