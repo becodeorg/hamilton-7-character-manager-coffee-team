@@ -16,8 +16,10 @@ const id = url.split('=')[1];
 
 btnDelete.addEventListener('click', () => {
     if (window.confirm("Do you really want to delete this character?")) {
-        deleteCharacter()
-        window.open("index.html");
+        deleteCharacter();
+        setTimeout(() => {
+          window.open("index.html");    // need to test that part
+        }, 3000);
       } else {
         console.log("This character is still there!");
       }

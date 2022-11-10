@@ -47,12 +47,7 @@ async function getCharacter() {
 
       btnSeeMore.textContent = 'See more'
       btnSeeMore.addEventListener('click', () => {
-
-        // get the element of the single page 
-
-        // display the data on the single page 
-
-
+          // go to another page to display the character
         document.location.href = `./single_character.html?id=${data.id}`;        
       })
 
@@ -90,20 +85,7 @@ async function getCharacter() {
 }
 
 getCharacter();
-
-//    function to add a character
-
-// async function addCharacter() {
-//   try {
-// let res = await axios.post('https://character-database.becode.xyz/characters', updateNewCharacter)
-//     console.log(res.data);
-//   } catch(err) {
-//     console.log(err)
-//   }
-// }
-
-// addCharacter()   
-
+  
 
 //    function to edit a character
 

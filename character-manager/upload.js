@@ -15,3 +15,16 @@ btnSaveChanges.addEventListener('click', () => {
 
   console.log(newCharacter)
 })
+
+//    function to add a character
+
+// async function addCharacter() {
+//   try {
+// let res = await axios.post('https://character-database.becode.xyz/characters', updateNewCharacter)
+//     console.log(res.data);
+//   } catch(err) {
+//     console.log(err)
+//   }
+// }
+
+// addCharacter() 
