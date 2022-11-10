@@ -6,8 +6,8 @@ const userCharacterName = document.getElementById('userCharacterName');
 const userCharacterNickname = document.getElementById('userCharacterNickname');
 const userCharacterDescription = document.getElementById('userCharacterDescription');
 const userCharacterImg = document.getElementById('userCharacterImg');
-const btnSaveChanges = document.getElementById('saveChanges');
-const btnDelete = document.getElementById('btnDelete')
+const btnCreateCharacter = document.getElementById('createCharacter');
+const btnCancel = document.getElementById('cancel')
 let dataImg;
 let newCharacter;
 
@@ -36,7 +36,6 @@ function encode() {
       newImage.src = srcData;   // set the data as the source of the new img
       document.getElementById("imgPreview").innerHTML = newImage.outerHTML;  // div to display image
       dataImg = srcData.split(",")[1];    // only get the data of the image
-      console.log(dataImg); // log the data of the img
     }
     fileReader.readAsDataURL(imageFile);
   }
@@ -44,24 +43,18 @@ function encode() {
 
 userCharacterImg.addEventListener('change', () => encode());
 
-btnSaveChanges.addEventListener('click', () => {
+btnCreateCharacter.addEventListener('click', () => {
 
   // get the users values
-
-  newCharacter = {      // get the value of the input
+  newCharacter = {
     description: userCharacterDescription.value,
     shortDescription: userCharacterNickname.value,  
     name: userCharacterName.value,
     image: dataImg
   }
-
-  // add character
-
   addCharacter()
-
-  console.log(newCharacter)
 })
 
-btnDelete.addEventListener('click', () => {
+btnCancel.addEventListener('click', () => {
   document.location.href = 'index.html'
 })
