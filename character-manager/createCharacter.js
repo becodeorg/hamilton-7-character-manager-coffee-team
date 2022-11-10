@@ -1,5 +1,3 @@
-import axios from "axios";
-
 // Create character
 
 const userCharacterName = document.getElementById('userCharacterName');
@@ -14,8 +12,13 @@ let newCharacter;
 //  function to add a character
 async function addCharacter() {
   try {
-    let res = await axios.post('https://character-database.becode.xyz/characters', newCharacter)
-    console.log(res.data);
+    const res = await fetch('https://character-database.becode.xyz/characters/', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(newCharacter)
+    });
     document.location.href = 'index.html'
   } catch(err) {
     console.log(err)

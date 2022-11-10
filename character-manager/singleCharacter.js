@@ -1,5 +1,3 @@
-import axios from "axios";
-
 // get every elements
 
 const singleCharacterName = document.getElementById('singleCharacterName');
@@ -35,8 +33,8 @@ btnDelete.addEventListener('click', () => {
 
 async function getSingleCharacter() {
     try {
-      let res = await axios.get(`https://character-database.becode.xyz/characters/${id}`);
-      let data = res.data;
+      const res = await fetch(`https://character-database.becode.xyz/characters/${id}`);
+      const data = await res.json();
       singleCharacterName.textContent = data.name;
       singleCharacterNickname.textContent = data.shortDescription;
       singleCharacterDescription.textContent = data.description;
@@ -53,7 +51,9 @@ getSingleCharacter()
 
 async function deleteCharacter() {
   try {
-    let res = await axios.delete(`https://character-database.becode.xyz/characters/${id}`)
+    const res = await fetch(`https://character-database.becode.xyz/characters/${id}`,{
+      method : 'DELETE',
+    });
     console.log(res.data); // we can redirect to the index page
   } catch(err) {
     console.log(err)

@@ -1,5 +1,3 @@
-import axios from "axios";
-
 // get every elements
 
 const userCharacterName = document.getElementById('userCharacterName');
@@ -21,8 +19,8 @@ const id = url.split('=')[1];
 
 async function getSingleCharacter() {
     try {
-      let res = await axios.get(`https://character-database.becode.xyz/characters/${id}`);
-      let data = res.data;
+      const res = await fetch(`https://character-database.becode.xyz/characters/${id}`);
+      const data = await res.json();
       userCharacterName.value = data.name;
       userCharacterNickname.value = data.shortDescription;
       userCharacterDescription.textContent = data.description;
@@ -43,7 +41,13 @@ getSingleCharacter()
 
 async function updateCharacter() {
   try {
-    await axios.put(`https://character-database.becode.xyz/characters/${id}`, updatedCharacter)   //    add the id
+    const res = await fetch(`https://character-database.becode.xyz/characters/${id}`, {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(updatedCharacter)
+    });
     document.location.href = 'index.html'
   } catch(err) {
     console.log(err)

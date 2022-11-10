@@ -6,8 +6,8 @@ async function getCharacter() {
 
     // GET method
 
-    let res = await fetch('https://character-database.becode.xyz/characters/');
-    let datas = await res.json();
+    const res = await fetch('https://character-database.becode.xyz/characters/');
+    const datas = await res.json();
 
     // loop through all the datas 
 
