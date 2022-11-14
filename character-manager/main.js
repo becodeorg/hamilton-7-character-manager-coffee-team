@@ -25,8 +25,8 @@ async function getCharacter() {
       // set the styles
 
       div.setAttribute('class', 'flex flex-col m-auto rounded-2xl bg-white bg-opacity-20 shadow-xl w-3/4 md:w-2/5 xl:w-1/5')
-      heading.setAttribute('class', 'text-white opacity-100 m-auto my-4 text-2xl')
-      subHeading.setAttribute('class', 'text-white opacity-100 m-auto my-4 text-xl')
+      heading.setAttribute('class', 'text-white opacity-100 m-auto my-4 text-2xl max-w-[90%] overflow-hidden')
+      subHeading.setAttribute('class', 'text-white opacity-100 m-auto my-4 text-xl max-w-[90%] overflow-hidden')
       description.setAttribute('class', 'm-4 p-2 text-white h-[250px] overflow-hidden text-justify')
       btnSeeMore.setAttribute('class', 'font-sans bg-purple-900 hover:bg-purple-500 text-white py-2 px-4 rounded-full w-1/2 mx-auto my-5')
       image.setAttribute('src', `data:image/gif;base64, ${data.image}`);      // transform the URI in img 
