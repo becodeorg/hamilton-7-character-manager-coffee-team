@@ -60,6 +60,14 @@ async function updateCharacter() {
   }
 }
 
+
+userCharacterImg.onchange = function() {
+  if(this.files[0].size > 800000){
+     alert("The image is too big!");
+     this.value = "";
+  };
+};
+
 // convert the img in data and display a preview of the image
 
 function encode() {

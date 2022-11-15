@@ -49,6 +49,15 @@ function encode() {
   }
 };
 
+
+
+userCharacterImg.onchange = function() {
+    if(this.files[0].size > 800000){
+       alert("The image is too big!");
+       this.value = "";
+    };
+};
+
 userCharacterImg.addEventListener('change', () => encode());
 
 btnCreateCharacter.addEventListener('click', () => {
