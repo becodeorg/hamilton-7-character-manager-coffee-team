@@ -41,13 +41,23 @@ async function getCharacter() {
         document.location.href = `./single_character.html?id=${data.id}`;        
       })
 
+      //
+      
+      const converter = new showdown.Converter();
+      const text = data.description;
+      const html = converter.makeHtml(text);
+
+      console.log(description)
+
       // put the data in the tag
 
       heading.textContent = data.name;
       subHeading.textContent = data.shortDescription;
-      description.textContent = data.description;
+      description.innerHTML = html;
       cardWrapper.append(div);
       div.append(image, heading, subHeading, description, btnSeeMore);
+
+
 
 
       // search bar
