@@ -787,10 +787,6 @@ h1 {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
-.hover\:border-2:hover {
-  border-width: 2px;
-}
-
 .hover\:border-indigo-900:hover {
   --tw-border-opacity: 1;
   border-color: rgb(49 46 129 / var(--tw-border-opacity));

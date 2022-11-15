@@ -14,6 +14,13 @@ const btnCancel = document.getElementById('cancel')
 let dataImg;
 let newCharacter;
 
+userCharacterImg.onchange = function() {
+  if(this.files[0].size > 800000){
+     alert("The image is too big!");
+     this.value = "";
+  };
+};
+
 //  function to add a character
 async function addCharacter() {
   try {
@@ -48,6 +55,8 @@ function encode() {
     fileReader.readAsDataURL(imageFile);
   }
 };
+
+
 
 userCharacterImg.addEventListener('change', () => encode());
 

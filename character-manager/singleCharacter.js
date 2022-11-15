@@ -25,7 +25,6 @@ btnEdit.addEventListener('click', () => {
 btnDelete.addEventListener('click', () => {
     if (window.confirm("Do you really want to delete this character?")) {
         deleteCharacter();
-        window.open("index.html");    // not deleted when going to index, need to refresh..
       } else {
         console.log("This character is still there!");
       }
@@ -64,7 +63,7 @@ async function deleteCharacter() {
     const res = await fetch(`https://character-database.becode.xyz/characters/${id}`,{
       method : 'DELETE',
     });
-    console.log(res.data); // we can redirect to the index page
+    document.location.href = "index.html"; // we can redirect to the index page
   } catch(err) {
     console.log(err)
   }

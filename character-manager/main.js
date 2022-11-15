@@ -3,7 +3,6 @@ const searchBar = document.getElementById('searchBar');
 
 async function getCharacter() {
   try {
-
     // GET method
 
     const res = await fetch('https://character-database.becode.xyz/characters/');
@@ -68,7 +67,7 @@ async function getCharacter() {
         filter = filter.toUpperCase();
         txtValue = txtValue.toUpperCase();    // not case sensitive
 
-        if (txtValue.indexOf(filter) > -1) {  // idk but it works
+        if (txtValue.indexOf(filter) > -1) {  // indexOf return -1 if the txtvalue don't have anything from the data.name so we don't display the card
           div.style.display = "";
         } else {
           div.style.display = "none";
