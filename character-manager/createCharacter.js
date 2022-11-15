@@ -1,5 +1,10 @@
 // Create character
 
+
+// markdown  
+var simplemde = new SimpleMDE({ element: document.getElementById("userCharacterDescription") });
+
+
 const userCharacterName = document.getElementById('userCharacterName');
 const userCharacterNickname = document.getElementById('userCharacterNickname');
 const userCharacterDescription = document.getElementById('userCharacterDescription');
@@ -50,12 +55,13 @@ btnCreateCharacter.addEventListener('click', () => {
 
   // get the users values
   newCharacter = {
-    description: userCharacterDescription.value,
+    description: simplemde.value(),
     shortDescription: userCharacterNickname.value,  
     name: userCharacterName.value,
     image: dataImg
   }
   addCharacter()
+  console.log(newCharacter)
 })
 
 btnCancel.addEventListener('click', () => {

@@ -1,5 +1,10 @@
 // get every elements
 
+
+
+// markdown  
+var simplemde = new SimpleMDE({ element: document.getElementById("userCharacterDescription") });
+
 const userCharacterName = document.getElementById('userCharacterName');
 const userCharacterDescription = document.getElementById('userCharacterDescription');
 const userCharacterNickname = document.getElementById('userCharacterNickname');
@@ -23,13 +28,14 @@ async function getSingleCharacter() {
       const data = await res.json();
       userCharacterName.value = data.name;
       userCharacterNickname.value = data.shortDescription;
-      userCharacterDescription.textContent = data.description;
+      simplemde.value(`${data.description}`);
       const currentCharacterImg = document.createElement('img'); // create a new img
       currentCharacterImg.setAttribute('src', `data:image/gif;base64, ${data.image}`);
       currentCharacterImg.setAttribute('width', '125px');
       currentCharacterImg.setAttribute('class', 'mx-auto shadow-xl rounded-full');
       imgPreview.append(currentCharacterImg);
       imgUri = data.image;
+      console.log(data.description)
     } catch(err) {
         console.log(err);
     }
@@ -79,14 +85,14 @@ userCharacterImg.addEventListener('change', () => encode());
 btnSaveChanges.addEventListener('click', () => {
   if (dataImg == undefined) {
     updatedCharacter = {      // get the value of the input
-      description: userCharacterDescription.value,
+      description: simplemde.value(),
       shortDescription: userCharacterNickname.value,  
       name: userCharacterName.value,
       image: imgUri    // get the new image
     }
   } else {
     updatedCharacter = {      // get the value of the input
-      description: userCharacterDescription.value,
+      description: simplemde.value(),
       shortDescription: userCharacterNickname.value,  
       name: userCharacterName.value,
       image: dataImg   // get the current image

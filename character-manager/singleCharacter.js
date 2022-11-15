@@ -12,6 +12,8 @@ const btnEdit = document.getElementById('btnEdit');
 const url = window.location.href;
 const id = url.split('=')[1];
 
+
+
 // edit the character
 
 btnEdit.addEventListener('click', () => {
@@ -35,9 +37,17 @@ async function getSingleCharacter() {
     try {
       const res = await fetch(`https://character-database.becode.xyz/characters/${id}`);
       const data = await res.json();
+
+      // convert markdown to html 
+
+      const converter = new showdown.Converter();
+      const text = data.description;
+      const html = converter.makeHtml(text);
+
       singleCharacterName.textContent = data.name;
       singleCharacterNickname.textContent = data.shortDescription;
-      singleCharacterDescription.textContent = data.description;
+      singleCharacterDescription.innerHTML = html;
+      
       singleCharacterImg.setAttribute('src', `data:image/gif;base64, ${data.image}`);
       singleCharacterImg.setAttribute('width', '125');
       singleCharacterImg.setAttribute('class', 'shadow-xl mx-auto rounded-full my-4');
