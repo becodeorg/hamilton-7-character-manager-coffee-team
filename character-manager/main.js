@@ -3,7 +3,6 @@ const searchBar = document.getElementById('searchBar');
 
 async function getCharacter() {
   try {
-
     // GET method
 
     const res = await fetch('https://character-database.becode.xyz/characters/');
