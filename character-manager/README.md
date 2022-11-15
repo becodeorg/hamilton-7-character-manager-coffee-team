@@ -17,5 +17,5 @@
 
 ## Tips
 
-- To test APIs rapidly before coding you can use ![Postman](https://www.postman.com/).
+- To test APIs rapidly before coding you can use [Postman](https://www.postman.com/).
 - To help you to perfom HTTP Requests, use the Fetch API.
