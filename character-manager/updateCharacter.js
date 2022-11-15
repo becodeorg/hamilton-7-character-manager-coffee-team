@@ -111,5 +111,5 @@ btnSaveChanges.addEventListener('click', () => {
 })
 
 btnCancel.addEventListener('click', () => {
-  document.location.href = 'index.html'
+  document.location.href = `single_character.html?id=${id}`
 })
